@@ -17,44 +17,56 @@ body {
     margin: 0 auto;
 }
 
-/* Header */
+/* Header Styles */
 header {
     background-color: #333;
-    color: white;
-    padding: 20px 0;
-    position: sticky;
+    padding: 10px 0; /* Reduced padding to make it more compact */
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for the header */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Added some horizontal padding */
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2.5em;
+    font-size: 1.8em;
+    color: white;
     font-weight: bold;
-    letter-spacing: 2px;
+    margin: 0; /* Removed any margin to keep it neat */
 }
 
 nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 15px;
+    gap: 20px; /* Controls the space between the links */
 }
 
 nav ul li {
-    margin: 0 20px;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff6347;
+    color: #ff5722;
 }
+
 
 /* About Section */
 .about {
